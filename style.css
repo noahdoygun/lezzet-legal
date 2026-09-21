@@ -1,0 +1,298 @@
+/* Lezzet Haritası — yasal sayfaların ortak biçimi.
+   Bu sayfalar uygulamanın içinden, telefonda açılıyor; önce okunabilirlik. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8f6;
+  --border: #e6e9e3;
+  --text: #1e211c;
+  --muted: #6b7069;
+  --primary: #22a559;
+  --primary-dark: #178a45;
+  --primary-tint: #dcf5e3;
+  --amber-tint: #fff1ce;
+  --amber-dark: #e29a00;
+  --coral: #e0574a;
+  --coral-tint: #fde8e4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #14160f;
+    --surface: #1c1f18;
+    --border: #2b2f26;
+    --text: #edefe9;
+    --muted: #9aa094;
+    --primary: #3fc275;
+    --primary-dark: #7ee0a4;
+    --primary-tint: #1d3527;
+    --amber-tint: #3a2f12;
+    --amber-dark: #ffc95a;
+    --coral: #ff8b7e;
+    --coral-tint: #3a211d;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #14160f;
+  --surface: #1c1f18;
+  --border: #2b2f26;
+  --text: #edefe9;
+  --muted: #9aa094;
+  --primary: #3fc275;
+  --primary-dark: #7ee0a4;
+  --primary-tint: #1d3527;
+  --amber-tint: #3a2f12;
+  --amber-dark: #ffc95a;
+  --coral: #ff8b7e;
+  --coral-tint: #3a211d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 16px 80px;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header.top {
+  padding: 40px 0 22px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.brand span.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 16px 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.updated {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 38px 0 10px;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 24px 0 6px;
+}
+
+p,
+li {
+  color: var(--text);
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul,
+ol {
+  margin: 0 0 14px;
+  padding-inline-start: 22px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+a {
+  color: var(--primary-dark);
+}
+
+strong {
+  font-weight: 650;
+}
+
+.lede {
+  font-size: 17px;
+  color: var(--muted);
+}
+
+/* Okuyanın bir dakikada anlaması gereken şeyler. */
+.note {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 0 0 18px;
+  font-size: 15px;
+}
+
+.note.warn {
+  background: var(--amber-tint);
+  border-color: transparent;
+}
+
+.note.warn strong {
+  color: var(--amber-dark);
+}
+
+.note.stop {
+  background: var(--coral-tint);
+  border-color: transparent;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+  font-size: 14.5px;
+}
+
+th,
+td {
+  text-align: start;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--surface);
+  font-weight: 650;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+/* Dar ekranda tablo taşmasın diye satırlara dönüşüyor. */
+@media (max-width: 560px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 6px 4px;
+    margin-bottom: 12px;
+  }
+
+  td {
+    border: 0;
+    padding: 6px 12px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+}
+
+/* Doldurulmadan yayına çıkmaması gereken alanlar. Kırmızı duruyorlar ki
+   sayfaya bir bakışta gözden kaçmasınlar. */
+.todo {
+  background: var(--coral-tint);
+  color: var(--coral);
+  border-radius: 5px;
+  padding: 1px 6px;
+  font-weight: 700;
+  font-size: 0.92em;
+  white-space: nowrap;
+}
+
+footer.bottom {
+  margin-top: 46px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer.bottom a {
+  margin-inline-end: 16px;
+}
+
+.toc {
+  background: var(--primary-tint);
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 26px;
+}
+
+.toc ol {
+  margin: 0;
+  columns: 2;
+  column-gap: 24px;
+  font-size: 14.5px;
+}
+
+.toc a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .toc ol {
+    columns: 1;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

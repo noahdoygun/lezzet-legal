@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lezzet Haritası — Yasal</title>
+    <meta name="description" content="Lezzet Haritası uygulamasının kullanım şartları ve gizlilik politikası." />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .cards {
+        display: grid;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 18px 20px;
+      }
+
+      .card:hover {
+        border-color: var(--primary);
+      }
+
+      .card h2 {
+        margin: 0 0 4px;
+        font-size: 18px;
+        color: var(--primary-dark);
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14.5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <span class="brand"><span class="dot"></span> Lezzet Haritası</span>
+        <h1>Yasal belgeler</h1>
+        <p class="updated">Son güncelleme: 21 Eylül 2026</p>
+      </header>
+
+      <p class="lede">
+        Lezzet Haritası, dünya mutfaklarından tarifler sunan bir mobil uygulamadır. Aşağıdaki iki belge uygulamayı
+        kullanırken geçerli olan kuralları ve verilerinizin nasıl işlendiğini açıklar.
+      </p>
+
+      <div class="cards">
+        <a class="card" href="kullanim-sartlari.html">
+          <h2>Kullanım Şartları →</h2>
+          <p>Hizmetin kuralları, Lezzet Plus aboneliği, otomatik yenileme ve iptal, içerik kuralları.</p>
+        </a>
+        <a class="card" href="gizlilik.html">
+          <h2>Gizlilik Politikası →</h2>
+          <p>Hangi veri toplanıyor, nerede duruyor, kimlerle paylaşılıyor ve nasıl sildirirsiniz.</p>
+        </a>
+      </div>
+
+      <footer class="bottom">
+        <a href="mailto:noahdoygun@gmail.com">noahdoygun@gmail.com</a>
+      </footer>
+    </div>
+  </body>
+</html>
