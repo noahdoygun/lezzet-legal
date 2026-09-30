@@ -15,7 +15,7 @@
       <header class="top">
         <a class="brand" href="index.html"><span class="dot"></span> Lezzet Haritası</a>
         <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: 28 Eylül 2026</p>
+        <p class="updated">Son güncelleme: 30 Eylül 2026</p>
       </header>
 
       <p class="lede">
@@ -30,7 +30,7 @@
           <li>Şifreni biz göremeyiz: giriş hizmetimiz onu geri çevrilemez biçimde (hash) saklar.</li>
           <li>Toplulukta paylaştıkların (gönderi, yorum, fotoğraf, video) <strong>herkese açıktır</strong>.</li>
           <li>Ücretsiz sürümde <strong>Google AdMob reklamları</strong> gösteriyoruz. Lezzet Plus abonelerine reklam göstermiyoruz. Verini satmıyoruz.</li>
-          <li>AI Şef'e yazdıkların cevap üretilmesi için <strong>Google'a</strong> gönderilir.</li>
+          <li>Pişirme Koçu'na yazdıkların, gösterdiğin yemek fotoğrafları ve sesli sorduğun sorular cevap üretilmesi için <strong>Google'a</strong> gönderilir. Fotoğraf ve ses kayıtlarını sunucumuzda saklamayız.</li>
           <li>Hesabını uygulamanın içinden, sunucudaki her şeyiyle birlikte silebilirsin.</li>
         </ul>
       </div>
@@ -44,9 +44,9 @@
           <li><a href="#topluluk">Toplulukta paylaştıkların</a></li>
           <li><a href="#guvenlik">Bildirme, engelleme ve kötüye kullanım</a></li>
           <li><a href="#cihaz-kimligi">Cihaz kimliği</a></li>
-          <li><a href="#ai-sef">AI Şef ve Google</a></li>
+          <li><a href="#ai-sef">Pişirme Koçu ve Google</a></li>
           <li><a href="#reklam">Reklamlar</a></li>
-          <li><a href="#ses">Mikrofon ve sesli okuma</a></li>
+          <li><a href="#ses">Mikrofon, sesli sohbet ve sesli okuma</a></li>
           <li><a href="#fotograflar">Fotoğraflar ve videolar</a></li>
           <li><a href="#abonelik">Ödeme ve abonelik</a></li>
           <li><a href="#paylasim">Kimlerle paylaşıyoruz</a></li>
@@ -84,7 +84,7 @@
             <td data-label="Neden">Hesabına giriş yapabilmen</td>
           </tr>
           <tr>
-            <td data-label="Veri">Kaydettiğin / pişirdiğin tarifler, menü planı, alışveriş listesi, dolabın, ayarların, AI Şef sohbetlerin</td>
+            <td data-label="Veri">Kaydettiğin / pişirdiğin tarifler, menü planı, alışveriş listesi, dolabın, ayarların, eski AI Şef sohbetlerin</td>
             <td data-label="Nerede durur">Telefonunda; hesabın varsa ayrıca yedeğinde</td>
             <td data-label="Neden">Uygulamayı kişiselleştirmek, telefon değişince kaybolmaması</td>
           </tr>
@@ -114,9 +114,19 @@
             <td data-label="Neden">Topluluktaki kaydını tanımak, kotalar</td>
           </tr>
           <tr>
-            <td data-label="Veri">AI Şef'e yazdıkların</td>
+            <td data-label="Veri">Pişirme Koçu'na yazdıkların</td>
             <td data-label="Nerede durur">Google'a gönderilir</td>
             <td data-label="Neden">Cevabın üretilmesi</td>
+          </tr>
+          <tr>
+            <td data-label="Veri">Pişirme Koçu'na gösterdiğin yemek fotoğrafı</td>
+            <td data-label="Nerede durur">Küçültülüp Google'a gönderilir, sunucumuzda <strong>saklanmaz</strong>; telefonunda 7 gün</td>
+            <td data-label="Neden">Yemeğin hazır olup olmadığının söylenmesi</td>
+          </tr>
+          <tr>
+            <td data-label="Veri">Pişirme Koçu'na sesli sorduğun sorular (ses kaydı)</td>
+            <td data-label="Nerede durur">Google'a gönderilir, sunucumuzda ve telefonunda <strong>saklanmaz</strong></td>
+            <td data-label="Neden">Ne dediğinin anlaşılması ve cevabın üretilmesi</td>
           </tr>
           <tr>
             <td data-label="Veri">IP adresin</td>
@@ -166,7 +176,7 @@
         <li>Profilin (ad, kullanıcı adı, "hakkında" yazısı; fotoğraflar yalnızca zaten sunucudaysa)</li>
         <li>Kaydettiğin ve pişirdiğin tarifler, pişirme geçmişin, menü planın, alışveriş listen</li>
         <li>Dolabındaki malzemeler, son baktığın tarifler, son aramaların</li>
-        <li>AI Şef ayarların (cevap tarzı, beslenme tercihleri, kişi sayısı) ve <strong>sohbet geçmişin</strong></li>
+        <li>Koçun ayarları (cevap tarzı, beslenme tercihleri, kişi sayısı) ve eski AI Şef <strong>sohbet geçmişin</strong></li>
         <li>Kendi verdiğin yıldızlar, uygulama ayarların ve tema tercihin</li>
       </ul>
       <p>
@@ -226,25 +236,49 @@
         <li>Reklam veya takip amacıyla <strong>kullanılmaz</strong>, reklam ağlarına verilmez.</li>
       </ul>
 
-      <h2 id="ai-sef">8. AI Şef ve Google</h2>
+      <h2 id="ai-sef">8. Pişirme Koçu ve Google</h2>
       <p>
-        AI Şef'e bir soru yazdığında, o sohbetteki <strong>son 12 mesaj</strong>, AI Şef ayarların (cevap tarzı,
-        beslenme tercihleri, kişi sayısı) ve tarif kataloğumuz, cevabı üretmesi için Google LLC'nin Gemini servisine
-        gönderilir. Bu isteklere adın, e-postan veya cihaz kimliğin eklenmez.
+        Pişirme Koçu (eski adıyla AI Şef de artık onun içinde) sorularını yanıtlamak için Google LLC'nin
+        <strong>Gemini</strong> servisini kullanır. Koça bir şey sorduğunda şunlar Gemini'ye gönderilir:
       </p>
+      <ul>
+        <li>Sorun: yazdığın metin, çektiğin ya da seçtiğin <strong>fotoğraf</strong> (küçültülmüş) veya sesli sorduysan <strong>ses kaydın</strong>;</li>
+        <li>O sohbetteki son birkaç mesaj (yalnızca metin);</li>
+        <li>Koçun ayarların (cevap tarzı, beslenme tercihleri, kişi sayısı), tarif kataloğumuz ve varsa baktığın tarif ya da pişirme modunda bulunduğun adım.</li>
+      </ul>
       <p>
-        Google'ın bu veriyi nasıl işlediği kendi koşullarına tabidir:
+        Bu isteklere adın, e-postan veya cihaz kimliğin eklenmez. Fotoğraflar ve ses kayıtları <strong>sunucumuzda
+        saklanmaz ve loglanmaz</strong>; yalnızca cevap üretilirken işlenir. Google'ın bu veriyi nasıl işlediği ve
+        ne kadar tuttuğu kendi koşullarına tabidir:
         <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a>.
       </p>
       <p>
-        Günlük soru sınırı için sayaçlar cihaz kimliğine ve <strong>IP adresine</strong> göre tutulur ve birkaç gün
-        içinde silinir. Sohbet geçmişin telefonunda ve hesabın varsa yedeğinde durur (<a href="#yedek">4. bölüm</a>);
-        sunucumuzda ayrıca saklanmaz.
+        <strong>Önemli:</strong> Pişirme Koçu şu an Gemini'nin ücretsiz katmanıyla çalışıyor. Bu katmanda Google,
+        gönderilen içeriği (soru, fotoğraf, ses kaydı) ve cevapları kendi ürünlerini ve yapay zekâ modellerini
+        geliştirmek için kullanabilir; kalite kontrolü için Google'ın inceleyicileri bu içeriği okuyabilir. Google
+        bunu yapmadan önce içeriği hesabımızdan ayırır; içerikte senin adın veya cihaz kimliğin bulunmaz. Bu yüzden
+        koça kişisel veya hassas bir şey yazma, söyleme ya da gösterme. Ücretli katmana geçtiğimizde bu kullanım
+        sona erecek ve bu bölümü güncelleyeceğiz.
+      </p>
+      <p id="pisirme-kocu">
+        Özelliği iyileştirmek için sunucumuzda yalnızca cevabın özeti (ör. "neredeyse", sorunun fotoğraflı, yazılı ya
+        da sesli olduğu, hangi tarif ve adım olduğu, ne kadar sürdüğü) tutulur; bu kayıt <strong>sana veya cihazına
+        bağlanmaz</strong>. Günlük soru sınırı için cihaz kimliğine ve IP adresine göre sayaç tutulur ve birkaç gün
+        içinde silinir. Sohbet ekranı telefonunda tutulur ve uygulamayı kapatınca silinir.
+      </p>
+      <p>
+        Koçun cevapları sesli okunurken cevabın <strong>metni</strong> (senin yazdığın ya da söylediğin değil, koçun
+        cevabı) seslendirilmesi için Google LLC'nin Cloud Text-to-Speech servisine gönderilir; oluşan ses saklanmaz.
+        Koça gösterdiğin fotoğraflar, ileride pişirme videosu yapabilmen için <strong>telefonunda</strong> 7 gün kalır,
+        sonra kendiliğinden silinir; bu sürede de hiçbir yere gönderilmez. Kamera ve mikrofon yalnızca sen koçu
+        kullanırken açılır; uygulama arka plana geçince kapanır.
       </p>
       <div class="note">
         <p>
-          AI Şef'e sağlık durumun veya başka hassas bilgilerini yazmamanı öneririz. Yazdıkların Google'a gider ve bu
-          tür bilgileri işlememiz gerekmiyor. Ayarlardaki beslenme tercihlerini (ör. "vejetaryen") seçmek isteğe bağlıdır.
+          Koça sağlık durumun veya başka hassas bilgilerini yazmamanı ya da söylememeni öneririz; yazdıkların ve
+          söylediklerin Google'a gider. Fotoğrafa başkalarının yüzü veya belgeler girmemesine dikkat et. Ayarlardaki
+          beslenme tercihlerini (ör. "vejetaryen") seçmek isteğe bağlıdır. Koç bir yardımcıdır: et ve kıymada içinin
+          piştiğinden emin olmak senin sorumluluğundadır.
         </p>
       </div>
 
@@ -268,16 +302,18 @@
         iOS: Ayarlar → Gizlilik ve Güvenlik → Takip). Google'ın reklam verisini nasıl işlediği:
         <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.
       </p>
-      <p>
-        AI Şef'te isteğe bağlı olarak <strong>ödüllü reklam</strong> izleyip ek soru hakkı kazanabilirsin. Bunun için
-        yalnızca reklamı izlediğin bilgisi sunucumuza iletilir.
-      </p>
 
       <h2 id="ses">10. Mikrofon ve sesli okuma</h2>
       <p>
-        Pişirme modunda iki isteğe bağlı özellik var. İkisi de Ayarlar → Mutfak'tan açılıp kapatılır:
+        Mikrofonu kullanan ya da sesli okuyan isteğe bağlı özellikler:
       </p>
       <ul>
+        <li>
+          <strong>Koçla sesli sohbet:</strong> Pişirme Koçu'nda mikrofon düğmesine basarsan koç seni dinler. Konuşman
+          bitince <strong>ses kaydın</strong> soru olarak Google'ın Gemini servisine gönderilir (<a href="#ai-sef">8. bölüm</a>);
+          sunucumuzda ve telefonunda saklanmaz. Mikrofon yalnızca sesli sohbet açıkken dinler; kapatınca, sekmeden
+          çıkınca ya da uygulama arka plana geçince kapanır.
+        </li>
         <li>
           <strong>Sesli okuma:</strong> adımlar telefonunun kendi konuşma motoruyla okunur. Hiçbir veri toplanmaz.
         </li>
@@ -333,8 +369,8 @@
           </tr>
           <tr>
             <td data-label="Sağlayıcı">Google LLC (Gemini)</td>
-            <td data-label="Ne için">AI Şef'in cevapları</td>
-            <td data-label="Ne alır">Sohbet mesajların ve AI Şef ayarların</td>
+            <td data-label="Ne için">Pişirme Koçu'nun cevapları ve kontrolleri</td>
+            <td data-label="Ne alır">Koça yazdıkların, küçültülmüş fotoğrafların, sesli sorularının kaydı, koçun ayarları ve tarif bağlamı</td>
           </tr>
           <tr>
             <td data-label="Sağlayıcı">Google LLC (AdMob)</td>
@@ -371,7 +407,8 @@
         <li><strong>Gönderilerin, yorumların, fotoğraf ve videoların:</strong> sen, biz ya da hesap silme işlemi silene kadar.</li>
         <li><strong>Beğeni, takip, yıldız, pişirme, bildirme ve engelleme kayıtların:</strong> hesabını silene kadar.</li>
         <li><strong>Süzgecin engellediği yorumlar:</strong> hesabını silene ya da biz silene kadar.</li>
-        <li><strong>İstek sınırı ve AI Şef kota sayaçları:</strong> en fazla birkaç gün.</li>
+        <li><strong>İstek sınırı ve Pişirme Koçu kota sayaçları:</strong> en fazla birkaç gün.</li>
+        <li><strong>Pişirme Koçu'na gösterdiğin fotoğraflar:</strong> sunucumuzda hiç saklanmaz; telefonunda 7 gün. <strong>Sesli soruların:</strong> hiçbir yerde saklanmaz.</li>
         <li><strong>Abonelik kaydın:</strong> abonelik bittikten sonra yasal saklama süresi boyunca.</li>
       </ul>
 
