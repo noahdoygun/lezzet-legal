@@ -15,7 +15,7 @@
       <header class="top">
         <a class="brand" href="index.html"><span class="dot"></span> Kitchen Coach AI</a>
         <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: 30 Eylül 2026</p>
+        <p class="updated">Son güncelleme: 4 Ekim 2026</p>
       </header>
 
       <p class="lede">
@@ -244,7 +244,10 @@
       <ul>
         <li>Sorun: yazdığın metin, çektiğin ya da seçtiğin <strong>fotoğraf</strong> (küçültülmüş) veya sesli sorduysan <strong>ses kaydın</strong>;</li>
         <li>O sohbetteki son birkaç mesaj (yalnızca metin);</li>
-        <li>Koçun ayarların (cevap tarzı, beslenme tercihleri, kişi sayısı), tarif kataloğumuz ve varsa baktığın tarif ya da pişirme modunda bulunduğun adım.</li>
+        <li>Koçun ayarların (cevap tarzı, beslenme tercihleri, kişi sayısı), tarif kataloğumuz ve varsa baktığın tarif ya da pişirme modunda bulunduğun adım;</li>
+        <li>Mutfağınla ilgili bağlam: dolabına eklediğin malzemeler, önümüzdeki birkaç günün menüsü, koçun çalışan zamanlayıcıları ve önceki mesajlarının kaç dakika önce yazıldığı;</li>
+        <li>Koçun senin hakkında <strong>hatırladıkları</strong> (ör. "Fırını yok."): yalnızca senin onayladıkların;</li>
+        <li>Bir tarifi bitirdikten sonra "bir dahakine ne değişsin" diye yazdıkların ve o tarif.</li>
       </ul>
       <p>
         Bu isteklere adın, e-postan veya cihaz kimliğin eklenmez. Fotoğraflar ve ses kayıtları <strong>sunucumuzda
@@ -264,11 +267,24 @@
         Özelliği iyileştirmek için sunucumuzda yalnızca cevabın özeti (ör. "neredeyse", sorunun fotoğraflı, yazılı ya
         da sesli olduğu, hangi tarif ve adım olduğu, ne kadar sürdüğü) tutulur; bu kayıt <strong>sana veya cihazına
         bağlanmaz</strong>. Günlük soru sınırı için cihaz kimliğine ve IP adresine göre sayaç tutulur ve birkaç gün
-        içinde silinir. Sohbet ekranı telefonunda tutulur ve uygulamayı kapatınca silinir.
+        içinde silinir. Koçla sohbetlerin (son 20 sohbet, fotoğraflar hariç) yalnızca <strong>telefonunda</strong>
+        saklanır; Ayarlar → Gizlilik'ten silebilirsin.
+      </p>
+      <p id="kocun-hafizasi">
+        <strong>Koçun hatırladıkları:</strong> koç, sohbette senin hakkında kalıcı bir bilgi fark ederse (ör. fırının
+        olmadığı, bir malzemeyi sevmediğin) bunu hatırlamak için <strong>önce sana sorar</strong>; yalnızca onaylarsan
+        telefonunda saklanır ve sonraki sorularınla birlikte Gemini'ye gönderilir. Sağlık (hastalık, alerji, ilaç),
+        din ve siyasetle ilgili bilgiler hatırlanmak üzere önerilmez; koç önerse bile sunucumuz bunları atar. Bu
+        bilgileri Ayarlar → Gizlilik → "Koçun hatırladıkları"ndan tek tek ya da toplu silebilirsin. Pişirme sonrası
+        koçun çıkardığı notlar, tarifin kendi notuna (yine yalnızca telefonunda) yazılır.
       </p>
       <p>
         Koçun cevapları sesli okunurken cevabın <strong>metni</strong> (senin yazdığın ya da söylediğin değil, koçun
-        cevabı) seslendirilmesi için Google LLC'nin Cloud Text-to-Speech servisine gönderilir; oluşan ses saklanmaz.
+        cevabı) seslendirilmesi için ElevenLabs, Inc.'in metinden sese servisine gönderilir; bu servis kullanılamazsa
+        cevap telefonunun kendi sesiyle okunur. Oluşan ses sunucumuzda saklanmaz; kısa cümleler uygulama açıkken
+        tekrar seslendirilmesin diye telefonunda geçici olarak tutulur. ElevenLabs'in bu metni nasıl işlediği kendi
+        koşullarına tabidir:
+        <a href="https://elevenlabs.io/privacy-policy" target="_blank" rel="noopener">elevenlabs.io/privacy-policy</a>.
         Koça gösterdiğin fotoğraflar, ileride pişirme videosu yapabilmen için <strong>telefonunda</strong> 7 gün kalır,
         sonra kendiliğinden silinir; bu sürede de hiçbir yere gönderilmez. Kamera ve mikrofon yalnızca sen koçu
         kullanırken açılır; uygulama arka plana geçince kapanır.
@@ -370,7 +386,17 @@
           <tr>
             <td data-label="Sağlayıcı">Google LLC (Gemini)</td>
             <td data-label="Ne için">Pişirme Koçu'nun cevapları ve kontrolleri</td>
-            <td data-label="Ne alır">Koça yazdıkların, küçültülmüş fotoğrafların, sesli sorularının kaydı, koçun ayarları ve tarif bağlamı</td>
+            <td data-label="Ne alır">Koça yazdıkların, küçültülmüş fotoğrafların, sesli sorularının kaydı, koçun ayarları, tarif bağlamı, dolabın ve menün, koçun hatırladıkları</td>
+          </tr>
+          <tr>
+            <td data-label="Sağlayıcı">ElevenLabs, Inc.</td>
+            <td data-label="Ne için">Koçun cevaplarını sesli okuma</td>
+            <td data-label="Ne alır">Koçun cevabının metni (senin yazdığın ya da söylediğin değil)</td>
+          </tr>
+          <tr>
+            <td data-label="Sağlayıcı">Functional Software, Inc. (Sentry)</td>
+            <td data-label="Ne için">Uygulama çökmelerini ve hatalarını görüp düzeltmek</td>
+            <td data-label="Ne alır">Hata raporu: hatanın yeri, cihaz modeli, işletim sistemi ve uygulama sürümü, anonim kullanıcı kimliği. Adın, e-postan ve IP adresin gönderilmez; veriler AB bölgesinde tutulur.</td>
           </tr>
           <tr>
             <td data-label="Sağlayıcı">Google LLC (AdMob)</td>
@@ -408,6 +434,8 @@
         <li><strong>Beğeni, takip, yıldız, pişirme, bildirme ve engelleme kayıtların:</strong> hesabını silene kadar.</li>
         <li><strong>Süzgecin engellediği yorumlar:</strong> hesabını silene ya da biz silene kadar.</li>
         <li><strong>İstek sınırı ve Pişirme Koçu kota sayaçları:</strong> en fazla birkaç gün.</li>
+        <li><strong>Koçla sohbetlerin ve koçun hatırladıkları:</strong> yalnızca telefonunda, sen silene ya da uygulamayı silene kadar.</li>
+        <li><strong>Hata raporları (Sentry):</strong> en fazla 90 gün.</li>
         <li><strong>Pişirme Koçu'na gösterdiğin fotoğraflar:</strong> sunucumuzda hiç saklanmaz; telefonunda 7 gün. <strong>Sesli soruların:</strong> hiçbir yerde saklanmaz.</li>
         <li><strong>Abonelik kaydın:</strong> abonelik bittikten sonra yasal saklama süresi boyunca.</li>
       </ul>
