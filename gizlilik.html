@@ -15,7 +15,7 @@
       <header class="top">
         <a class="brand" href="index.html"><span class="dot"></span> Kitchen Coach AI</a>
         <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: 7 Ekim 2026</p>
+        <p class="updated">Son güncelleme: 5 Kasım 2026</p>
       </header>
 
       <p class="lede">
@@ -30,7 +30,7 @@
           <li>Şifreni biz göremeyiz: giriş hizmetimiz onu geri çevrilemez biçimde (hash) saklar.</li>
           <li>Toplulukta paylaştıkların (gönderi, yorum, fotoğraf, video) <strong>herkese açıktır</strong>.</li>
           <li>Ücretsiz sürümde <strong>Google AdMob reklamları</strong> gösteriyoruz. Kitchen Coach Plus abonelerine reklam göstermiyoruz. Verini satmıyoruz.</li>
-          <li>Pişirme Koçu'na yazdıkların, gösterdiğin yemek fotoğrafları ve sesli sorduğun sorular cevap üretilmesi için <strong>Google'a</strong> gönderilir. Fotoğraf ve ses kayıtlarını sunucumuzda saklamayız.</li>
+          <li>Pişirme Koçu'na yazdıkların, gösterdiğin yemek fotoğrafları ve sesli sorduğun sorular cevap üretilmesi için <strong>Google'a</strong> gönderilir. Ses kayıtlarını sunucumuzda saklamayız; soru, cevap ve fotoğrafları da yalnızca geri bildirim verirken paylaşmayı seçersen saklarız.</li>
           <li>Hesabını uygulamanın içinden, sunucudaki her şeyiyle birlikte silebilirsin.</li>
         </ul>
       </div>
@@ -124,8 +124,13 @@
             <td data-label="Neden">Cevabın üretilmesi</td>
           </tr>
           <tr>
+            <td data-label="Veri">Koça verdiğin geri bildirim</td>
+            <td data-label="Nerede durur">Sunucumuzda, gizli. Soru, cevap ve fotoğraf yalnız paylaşmayı seçersen</td>
+            <td data-label="Neden">Koçun doğruluğunu ölçmek ve yanlışlarını düzeltmek</td>
+          </tr>
+          <tr>
             <td data-label="Veri">Pişirme Koçu'na gösterdiğin yemek fotoğrafı</td>
-            <td data-label="Nerede durur">Küçültülüp Google'a gönderilir, sunucumuzda <strong>saklanmaz</strong>; telefonunda 7 gün</td>
+            <td data-label="Nerede durur">Küçültülüp Google'a gönderilir, sunucumuzda <strong>saklanmaz</strong> (geri bildirimde paylaşmayı seçersen en fazla 90 gün); telefonunda 7 gün</td>
             <td data-label="Neden">Yemeğin hazır olup olmadığının söylenmesi</td>
           </tr>
           <tr>
@@ -261,7 +266,7 @@
       </ul>
       <p>
         Bu isteklere adın, e-postan veya cihaz kimliğin eklenmez. Fotoğraflar ve ses kayıtları <strong>sunucumuzda
-        saklanmaz ve loglanmaz</strong>; yalnızca cevap üretilirken işlenir. Google'ın bu veriyi nasıl işlediği ve
+        saklanmaz ve loglanmaz</strong>; yalnızca cevap üretilirken işlenir. Tek istisna, aşağıda anlatılan geri bildirimde fotoğrafı paylaşmayı seçmendir. Google'ın bu veriyi nasıl işlediği ve
         ne kadar tuttuğu kendi koşullarına tabidir:
         <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">ai.google.dev/gemini-api/terms</a>.
       </p>
@@ -279,6 +284,15 @@
         bağlanmaz</strong>. Günlük soru sınırı için cihaz kimliğine ve IP adresine göre sayaç tutulur ve birkaç gün
         içinde silinir. Koçla sohbetlerin (son 20 sohbet, fotoğraflar hariç) yalnızca <strong>telefonunda</strong>
         saklanır; Ayarlar → Gizlilik'ten silebilirsin.
+      </p>
+      <p id="koc-geri-bildirim">
+        <strong>Koça geri bildirim.</strong> Bir cevabı beğendim ya da beğenmedim diye işaretleyebilirsin. Bu durumda
+        puan, seçtiğin neden, cevabın durumu, cevabı yazan yapay zekâ modelinin adı, uygulama sürümü ve cihaz kimliğin
+        sunucumuza yazılır. Soru, cevap ve yazdığın not <strong>yalnızca o anda "paylaş" anahtarını açarsan</strong>
+        saklanır; fotoğraf için ayrı bir anahtar vardır. Bunları koçun yanlışlarını bulup düzeltmek için kullanırız:
+        kendi ekibimiz okur ve yapay zekâ hizmetlerinden yararlanarak özetleyebiliriz. Fotoğraflar herkese kapalı bir
+        alanda en fazla 90 gün, diğerleri en fazla 1 yıl tutulur; hesabını silince hepsi silinir. Misafir olarak
+        kullanıyorsan silinmesini iletişim adresimizden isteyebilirsin.
       </p>
       <p id="kocun-hafizasi">
         <strong>Koçun hatırladıkları:</strong> koç, sohbette senin hakkında kalıcı bir bilgi fark ederse (ör. fırının
@@ -439,6 +453,7 @@
       <h2 id="sure">14. Ne kadar saklıyoruz</h2>
       <ul>
         <li><strong>Hesabın ve yedeğin:</strong> hesabını silene kadar.</li>
+        <li><strong>Koça verdiğin geri bildirim:</strong> en fazla 1 yıl; paylaşmayı seçtiğin fotoğraf en fazla 90 gün.</li>
         <li><strong>Misafir kullanımda telefonundaki veriler:</strong> uygulamayı silene ya da çıkış yapana kadar.</li>
         <li><strong>Gönderilerin, yorumların, fotoğraf ve videoların:</strong> sen, biz ya da hesap silme işlemi silene kadar.</li>
         <li><strong>Beğeni, takip, yıldız, pişirme, bildirme ve engelleme kayıtların:</strong> hesabını silene kadar.</li>
